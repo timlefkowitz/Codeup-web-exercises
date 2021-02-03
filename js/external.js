@@ -26,7 +26,7 @@ var PricePerDay = 3;
 console.log(PricePerDay.toFixed(2));
 
 var finalprice = (Thelittlemermaid + BrotherBear + Hercules) * PricePerDay;
-alert("You pay " + finalprice + "NoW");
+alert("You pay " + finalprice + " NoW");
 
 
 
@@ -49,12 +49,18 @@ alert("Your pay this week should be $" + paythisweek);
 
 //////  Is the class full? /////
 
-var isclassfull = false;
-var classSchedule = true;
-var HerSchedule = true;
+var classIsFull = confirm("Is the class you are trying to join full?");
 
-var ClassSituation = isclassfull || classSchedule || HerSchedule;
-console.log(ClassSituation);
+var hasScheduleConflicts = confirm("Do you have class at 2:30?");
+
+alert("You can join the class is a " + (!classIsFull && hasScheduleConflicts) + " statement.");
+
+// var isclassfull = false;
+// var classSchedule = true;
+// var HerSchedule = true;
+
+// var ClassSituation = isclassfull || classSchedule || HerSchedule;
+// console.log(ClassSituation);
 
 
 
@@ -62,11 +68,24 @@ console.log(ClassSituation);
 
 ////// Product Offer \\\\\
 
-var ProductOfferCurrent = true;
-var offer = -20;
-var Item = 3;
-var Items = Item > 2;
-var PremiumMember = offer;
+var hasMoreThanTwoItems = confirm("Do you have more than two items in your cart?");
 
-var NotaMember = ProductOfferCurrent || Items;
-console.log(NotaMember);
+var isOfferValid = confirm("Is the offer still valid?");
+
+var PremiumMembers = confirm("Are you a premium member?");
+
+var canUserUseOffer = (hasMoreThanTwoItems || PremiumMembers) && isOfferValid;
+
+alert("You can use this offer is a " + canUserUseOffer + " statement.");
+
+
+//
+// var ProductOfferCurrent = true;
+// var offer = -20;
+// var Items = 3;
+// var ItemMorethen2 = Items > 2;
+// var PremiumMember = offer;
+//
+// var NotaMember = ProductOfferCurrent || ItemMorethen2;
+// console.log(NotaMember);
+//
