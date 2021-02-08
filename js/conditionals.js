@@ -102,10 +102,10 @@ switch (randomColor) {
 
 
 
-// function friendsfavorite(){
-//     prompt("What is your best friends favorite color?");
-//     return friendsfavorite(alert(analyzeColor));
-// }
+ function friendsfavorite(){
+     prompt("What is your best friends favorite color?");
+     return friendsfavorite(analyzeColor);
+ }
 
 
 /* ########################################################################## */
@@ -142,10 +142,10 @@ function calculateTotal(luck, OGprice){
     } else if (luckynumber === 1) {
         return ("Your total is = $" + OGprice +  "Your lucky number is 1, 10% discount for you! Total = $" + (OGprice - (OGprice * .10)));
     } else if (luckynumber === 2) {
-        return ("Your total is = $" + OGprice +  "Your lucky number is 2, 20% discount for you! Total = &" + (OGprice -(OGprice * .20)));
+        return ("Your total is = $" + OGprice +  "Your lucky number is 1, 20% discount for you! Total = $" + (OGprice - (OGprice * .20)));
     } else if (luckynumber === 3) {
         return ("Your total is = $" + OGprice +  "Your lucky number is 3, 35% discount for you! Total = &" + (OGprice - (OGprice * .35)));
-    } else if(luckynumber === 4) {
+    } else if (luckynumber === 4) {
         return ("Your total is = $" + OGprice +  "Your lucky number is 4, 50% discount for you! Total = $" + (OGprice - (OGprice * .5)));
         }  else if(luckynumber === 5) {
         return ("All for free!")
@@ -165,8 +165,12 @@ alert(calculateTotal());
  */
 
 //  Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 6);
 
+    var totalbill = prompt("What is your total bill? ");
+    alert("Your lucky number is " + luckynumber);
+    alert("Your total for the bill is $" + totalbill);
+    alert("Your discount is " +  calculateTotal);
 
 
 /**
