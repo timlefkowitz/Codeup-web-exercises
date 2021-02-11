@@ -244,3 +244,7 @@ if (userConfirmed) {
 //     alert("The number is Odd.")
 // }
 ////
+
+function basket(){
+    basket.push("Gotta get Good");
+}
