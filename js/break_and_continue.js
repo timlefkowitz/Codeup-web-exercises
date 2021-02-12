@@ -22,7 +22,9 @@ for (var i = 0; i < 50; i++) {
     if (i % 2 !==0) {
         console.log("Here is an odd number: " + i);
         continue;
-    } if ( i === usernum){
+    } else ( i === usernum);
         console.log("Yikes! Skipping number: " + usernum);
-    }
+        continue;
+
 }
+
