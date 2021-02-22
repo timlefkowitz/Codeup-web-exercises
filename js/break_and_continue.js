@@ -16,15 +16,28 @@
 //
 // }
 
-var usernum = prompt("Please enter a number 1 through 50");
 
-for (var i = 0; i < 50; i++) {
-    if (i % 2 !==0) {
-        console.log("Here is an odd number: " + i);
-        continue;
-    } else ( i === usernum);
-        console.log("Yikes! Skipping number: " + usernum);
-        continue;
-
+function isNumInRange(num){
+    return num >= 1 && num <= 50;
+}
+function isNumberEven(num){
+    return num % 2 === 0;
 }
 
+while (true){
+
+    if (!isNumberEven(usernum) && isNumInRange(usernum)){
+        break;
+}
+    usernum = prompt("Please enter a number 1 through 50");
+}
+
+console.log("Number to skip is: " + usernum);
+
+for (var i = 1; i <= 49; i+= 2){
+    if (i === usernum){
+        console.log("Yikes! Skipping number: " + usernum);
+        continue
+    }
+    console.log("Here is an off number: " + i);
+}
