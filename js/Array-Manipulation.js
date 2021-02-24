@@ -9,6 +9,11 @@
 
 // TODO: given the above array how do we log each element to the console?
 
+// pies.forEach(function(pie){
+//     console.log(pie);
+// })
+
+
 /**
  * ===== Concepts to cover:
  *
@@ -120,6 +125,14 @@
 
 // TODO EXERCISE: create a function that takes in an array of pies baked and return the 3 most recently baked pies
 
+
+// function lastThree(array) {
+//     return array.slice(array.length - 3)
+// }
+//
+// pie[0]
+
+
 // ============================= Reversing
 
 // var pies = [
@@ -161,12 +174,18 @@
 
 // splitting on an empty string
 
+// var everyCharacter = names.split("");
+// console.log(everyCharacter);
+// console.log(everyCharacter.reverse().join(""));;
+
 // var everyCharacter = bondsString.split("");
 
 // joining array into a string
 
 // var bondsArray = ["Connery", "Lazenby", "Moore", "Dalton", "Brosnan", "Craig"];
 // var bondsString = bondsArray.join("_");
+
+
 
 // TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
 //  and return an array of phone numbers without any symbols. Log the output of the returned array.
@@ -180,17 +199,36 @@
        5125553030
 */
 
-// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-//
-// function cleanPhoneNumbers(phoneNums) {
-//
-// }
-//
-// var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
-//
-// for (var i = 0; i < cleanNumsArr.length; i += 1) {
-//     console.log(cleanNumsArr[i]);
-// }
+var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+function cleanPhoneNumbers(phoneNums) {
+    var output=[];
+    var phoneNumbersArray = phoneNums.split("\n");
+    output = phonearray;
+    phoneNumbersArray.forEach(function(phoneNum)){
+        var phoneNumArray = phoneNum.split("-");
+        // console.log(phoneNumArray.join(""));
+        output.push(phoneNumArray.join(""));
+    }
+
+
+    return output;
+}
+
+var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
+
+for (var i = 0; i < cleanNumsArr.length; i += 1) {
+    console.log(cleanNumsArr[i]);
+}
+
+
+
+
+
+
+
+
+
 
 
 // ============================= (EXTRA INFO) Splicing Elements
