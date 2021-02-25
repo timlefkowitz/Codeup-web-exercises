@@ -30,11 +30,11 @@
     console.log(planetsString2)
 
 
-    function a() {
-        var planetsArray.forEach(function (planet) {
-            console.log(" <li> " + planet + " </li> ");
-        })
-    }
+    // function a() {
+    //     var planetsArray.forEach(function (planet) {
+    //         console.log(" <li> " + planet + " </li> ");
+    //     })
+    // }
 
 
 
@@ -45,8 +45,10 @@
 
     console.log(planetsArray);
 
-})();
 
-var ulplanets = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>" ;
-.
-console.log(ulplanets);
+    var ulplanets = ("<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>") ;
+    console.log(ulplanets);
+
+
+
+})();
