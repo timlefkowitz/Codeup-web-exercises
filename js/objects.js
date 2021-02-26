@@ -12,11 +12,13 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-    var person = new Object();
-    person.firstName ="Rick";
-    person.lastName = "Sanchez";
+    var person = {
+        firstName: "Timothy",
+        lastName: "Lefkowitz"
+    }
 
     console.log(person.firstName);
+    console.log(person.lastName);
 
     /**
      * TODO:
@@ -30,7 +32,7 @@
 
     // create a method
     person.sayHello = function () {
-        alert("Hello from " + person.firstName + " " + person.lastName );
+        alert("Hello from " + this.firstName + " " + this.lastName );
     };
     console.log(person.sayHello());
 
@@ -165,12 +167,36 @@
      *   `showBookInfo` function.
      */
 
-    function createBook(title, author){
-        var addtitle = prompt("Enter the title ");
-        var addauthor = prompt("Enter the Author ");
-        return addtitle.push(books.title) + addauthor.push(books.title);
+    // function createBook(title, author){
+    //     var addtitle = prompt("Enter the title ");
+    //     var addauthor = prompt("Enter the Author ");
+    //     return addtitle.push(books.title) + addauthor.push(books.title);
+    // }
+    // createBook();
+
+    function createBook(title, firstname, lastname){
+        var newBook = {
+            title: title,
+            author: {
+                firstname: firstname,
+                lastname: lastname
+            }
+        }
+        return newBook;
     }
-    createBook();
+
+console.log(createBook("Harry Potter", "J.K", "Rolling"));
+
+
+    function showBookInfo(bookObject){
+        console.log("Book # " + (books.indexOf(bookObject) + 1));
+        console.log("Title: " + bookObject.title);
+        console.log("Author: " + bookObject.author.firstName + " " + bookObject.author.lastName);
+
+        console.log(bookObject);
+
+    }
+
 
 
 })();
