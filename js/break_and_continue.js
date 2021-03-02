@@ -25,11 +25,10 @@ function isNumberEven(num){
 }
 
 while (true){
-
+    var usernum = prompt("Please enter a number 1 through 50");
     if (!isNumberEven(usernum) && isNumInRange(usernum)){
         break;
-}
-    usernum = prompt("Please enter a number 1 through 50");
+    }
 }
 
 console.log("Number to skip is: " + usernum);

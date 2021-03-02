@@ -138,4 +138,4 @@
 
     console.log(applyDiscount(price, discountPercent))
 
-)})};
+)})}
