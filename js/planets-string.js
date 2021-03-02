@@ -44,9 +44,10 @@
     // planetsArray.push(" </ul> ");
 
     console.log(planetsArray);
+    var ulplanets = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>" ;
+
+    console.log(ulplanets);
+
 
 })();
 
-var ulplanets = "<ul><li>" + planetsArray.join("</li><li>") + "</li></ul>" ;
-
-console.log(ulplanets);
