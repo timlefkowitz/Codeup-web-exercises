@@ -124,7 +124,7 @@ function returnLastElement(array){
 }
 
 console.log(returnLastElement(instructors)); //fernando
-console.log(returnLastElement(daysOfTheWeek)); //sunday
+console.log(returnLastElement(days0fTheWeek)); //sunday
 
 
 
@@ -201,9 +201,9 @@ shapes.forEach(printShape);
 
 // TODO TOGETHER: Using a for each loop, console.log each element from the following array: var pies = ["apple", "cherry", "key lime", "huckleberry"];
 
-pies.forEach(function(pie)){
+pies.forEach(function(pie){
     console.log(pie);
-}
+})
 
 // TODO: Using a for each loop, iterate through the instructors array and console.log each instructor
 
