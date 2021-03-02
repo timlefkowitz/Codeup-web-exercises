@@ -18,13 +18,16 @@
 // 7 x 10 = 70
 // */
 //
-//
-function showMultiplicationTable (num){
+
+
+function showMultiplicationTable(num){
     for (var i = 1; i <= 10; i++){
         console.log(num + " x " + i + " = " + (num * i))
     }
 }
 showMultiplicationTable(7);
+
+
 //
 // /*
 // Use a for loop and the code from the previous lessons to generate

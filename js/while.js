@@ -18,7 +18,7 @@ do {
         console.log("You sold " + requestedCones +", and have " + allCones + " cones left.");
     }else{
         //This means you dont have enough cones to sell
-        console.log("Sorry I don't have " requestedCones + " cones, I only have " + allCones + " cones left.")
+        console.log("Sorry I don't have " + requestedCones + " cones, I only have " + allCones + " cones left.");
     }
 } while (allCones > 0 )
 
