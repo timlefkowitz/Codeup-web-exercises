@@ -3,3 +3,20 @@
     color: coral; /* single line comment */
     text-decoration: underline;
 }
+
+.header{
+    align-content: center;
+    color:forestgreen;
+    text-decoration: underline;
+    text-decoration: blink;
+}
+body{
+    background-color: aquamarine;
+    background-image: url("https://unsplash.com/photos/77zGnfU_SFU/download?force=true&w=640");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+body>nav{
+    list-style: square;
+}
