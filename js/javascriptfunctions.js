@@ -2,14 +2,14 @@
 replace function
  */
 
+
 function replace(input, input2, input3){
-    if(typeof input === "string" && typeof input2 === "string" && typeof input4 === "string"){
-        return input.replace(input2, input3)
+    if(typeof input === "string" || typeof input2 === "string" || typeof input3 === "string"){
+        return input.replace(input2, input3);
     } else {
         return false;
     }
 }
-
 /*
 is a number function
  */
