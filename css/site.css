@@ -1,13 +1,16 @@
 
 .fancy-header {
-    color: coral; /* single line comment */
+    color: #8F3F2B; /* single line comment */
     text-decoration: underline;
 }
 
-.header{
-    align-content: center;
-    color:forestgreen;
+
+#header{
+    color:#8F3F2B;
     text-decoration: underline;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 body{
     background-color: aquamarine;
@@ -15,7 +18,33 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    align-content: center;
 }
-body>nav{
+ul{
     list-style: square;
 }
+
+th, td {
+    font-size: large;
+    padding: 2px;
+    text-align: center;
+    text-decoration: ;
+}
+
+.auto-margins {
+    margin-left: auto;
+    margin-right: auto;
+}
+table {
+    border: thin;
+}
+
+
+/*
+Add a style to change the table, table cells td and rows tr padding and font sizes.
+Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).
+                                                                                                     Continue experimenting with styles to increase the visual appeal of the page.
+
+                                                                                                     /*
+ */

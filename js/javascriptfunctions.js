@@ -5,7 +5,8 @@ replace function
 
 function replace(input, input2, input3){
     if(typeof input === "string" || typeof input2 === "string" || typeof input3 === "string"){
-        return input.replace(input2, input3);
+        var output = input.replace(input2, input3);
+        return output;
     } else {
         return false;
     }
