@@ -1,35 +1,55 @@
 
 .fancy-header {
-    color: #8F3F2B; /* single line comment */
+    color: #2E383B; /* single line comment */
     text-decoration: underline;
 }
 
-
-#header{
-    color:#8F3F2B;
+.header{
+    color:#2E383B;
     text-decoration: underline;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Helvetica', Helvetica;
 }
 body{
     background-color: aquamarine;
-    background-image: url("https://unsplash.com/photos/77zGnfU_SFU/download?force=true&w=640");
-    background-position: center;
+    background-image: url("https://static.thenounproject.com/png/3181734-200.png");
+    background-position: right;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
     font-family: 'Open Sans', sans-serif;
+    color:#2E383B;
     align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 ul{
-    list-style: square;
+    text-align: center;
+    list-style: inside;
+    text-align: center;
+    text-align: center;
+}
+
+li {
+    margin: 0 auto;
+}
+ol{
+    list-style-position: inside
+    /*text-align: center;*/
+    /*list-style: inside;*/
+    /*display: inline-block*/
+
 }
 
 th, td {
+    text-align: center;
     font-size: large;
     padding: 2px;
     text-align: center;
-    text-decoration: ;
+    border: 1px solid black;
 }
 
 .auto-margins {
@@ -37,7 +57,15 @@ th, td {
     margin-right: auto;
 }
 table {
-    border: thin;
+    border: 1px solid black;
+    border: 2px;
+    border-color:#FD4D3F;
+    text-align: center;
+    list-style: inside;
+    text-decoration: underline;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
