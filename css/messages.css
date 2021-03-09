@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+
+.messagemessage-info {
+    border-radius: 10px;
+    background: lightblue;
+    font-weight: bold;
+    padding:10px;
+    width: 70%;
+    opacity: 0.9;
+    color:black;
+    margin:10px 10px;
+    border:solid lightgray thin;
+}
+.messagemessage-success {
+    border-radius: 10px;
+    background: lightgreen;
+    font-weight: bold;
+    padding: 10px 10px;
+    width: 70%;
+    opacity: 0.9;
+    margin:10px 10px;
+    color:black;
+    border:solid lightgray thin;
+}
+.messagemessage-warning {
+    border-radius: 10px;
+    background: #e5e560;
+    font-weight: bold;
+    padding: 10px 10px;
+    width: 70%;
+    opacity: 0.9;
+    margin:10px 10px;
+    color:black;
+    border:solid lightgray thin;
+}
+.messagemessage-error {
+    border-radius: 10px;
+    background: #ee4b4b;
+    font-width: bold;
+    padding: 10px 10px;
+    width: 70%;
+    opacity: 0.9;
+    color:black;
+    margin:10px 10px;
+    border:solid lightgray thin;
+}

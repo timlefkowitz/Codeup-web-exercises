@@ -4,7 +4,7 @@
     text-decoration: underline;
 }
 
-.header{
+.header {
     color:#2E383B;
     text-decoration: underline;
     text-align: center;
@@ -34,14 +34,12 @@ a:link{
 ul{
     text-align: center;
     list-style: inside;
-    text-align: center;
-    text-align: center;
 }
 
 li {
     margin: 0 auto;
 }
-ol{
+ol {
     list-style-position: inside
     /*text-align: center;*/
     /*list-style: inside;*/
