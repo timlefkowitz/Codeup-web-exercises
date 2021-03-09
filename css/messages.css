@@ -8,45 +8,45 @@ body, html {
 
 .messagemessage-info {
     border-radius: 10px;
-    background: #5e053b;
+    background: #c6d7f6;
     font-weight: bold;
     padding:10px;
     width: 70%;
     opacity: 0.9;
-    color:black;
+    color: #4b3fb8;
     margin:10px 10px;
     border:solid lightgray thin;
 }
 .messagemessage-success {
     border-radius: 10px;
-    background: lightgreen;
+    background: #c7ead3;
     font-weight: bold;
     padding: 10px 10px;
     width: 70%;
     opacity: 0.9;
     margin:10px 10px;
-    color:black;
+    color: #386a20;
     border:solid lightgray thin;
 }
 .messagemessage-warning {
     border-radius: 10px;
-    background: #e5e560;
+    background: #f2f1c2;
     font-weight: bold;
     padding: 10px 10px;
     width: 70%;
     opacity: 0.9;
     margin:10px 10px;
-    color:black;
+    color: #8b7924;
     border:solid lightgray thin;
 }
 .messagemessage-error {
     border-radius: 10px;
-    background: #ee4b4b;
+    background: #f1cbd0;
     font-width: bold;
     padding: 10px 10px;
     width: 70%;
     opacity: 0.9;
-    color:black;
+    color: #a65969;
     margin:10px 10px;
     border:solid lightgray thin;
 }
