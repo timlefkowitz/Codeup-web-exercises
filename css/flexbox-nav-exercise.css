@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+.nav {
+    background-color: #2E383B;
+    /*justify-content: center;*/
+    display: flex;
+    align-items: baseline;
+    width:100%;
+}
+
+.item1 {
+    display: flex;
+    margin-right: auto ;
+    flex-basis: auto;
+}
+
+.item2 {
+    display: flex;
+    justify-content: center;
+    position: center;
+}
+
+.item3 {
+    display: flex;
+    margin-left:auto;
+}
+
+a:link{
+    color:cyan;
+}
+
+.fas {
+    display: flex;
+    padding:.5em;
+}
+
+a:visited {
+    color:blue;
+}
+
+a {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin:0;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: .5em;
+}
+
+.logo {
+    font-family: "Montserrat";
+    font-size: 3em;
+    padding: .2em 0 .2em 0;
+    display: inline-block;
+    flex-basis: content-box;
+
+}
