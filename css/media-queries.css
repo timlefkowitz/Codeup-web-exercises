@@ -1,0 +1,280 @@
+/* mobile first approach: media queries lecture*/
+
+@media screen and (min-width:414px) and (max-width:738px) {
+    /* ... */
+    .alert-info {
+        display: flex;
+        background-color: #cbffff;
+        justify-content: center;
+        padding: 1em;
+        border: 2px solid lightgray;
+        margin:1em;
+
+    }
+    .alert-info a:link{
+        color:black;
+        text-decoration: none;
+    }
+    nav ul li{
+        display: flex;
+        justify-content: center;
+        margin:1em;
+        padding:1em;
+        border: 1px solid gray;
+        background-color: gray;
+    }
+    .main h2{
+        display: flex;
+        align-items: flex-start;
+        margin:1em;
+    }
+    .main p{
+        display: flex;
+        align-items: flex-start;
+        margin:1em;
+    }
+    img {
+        display: inline-block;
+        width:100%;
+    }
+
+    .sub-section p{
+        display: flex;
+        align-items: flex-start;
+        margin:1em;
+    }
+
+    .sub-section h2{
+        display: flex;
+        align-items: flex-start;
+        margin:1em;
+    }
+
+    footer p{
+        display: flex;
+        align-items: flex-start;
+        margin:1em;
+    }
+    .header-img{
+        display: flex;
+        margin:0 1em;
+        justify-content: center;
+    }
+    body{
+        font-family: sans-serif;
+    }
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: 3em;
+    }
+
+
+}
+
+@media screen and (min-width:739px) {
+    * {
+        box-sizing: border-box;
+    }
+
+    .hidden-on-desktop{
+        display: none;
+    }
+        /*body>h1, .nav-links{*/
+        /*    display: flex;*/
+        /*    margin-left: 20%;*/
+    ul {
+        display: flex;
+        /*float:left;*/
+        padding: 1em;
+    }
+
+    h1 {
+        display: inline-block;
+        margin-top:1em;
+    }
+
+    img {
+        display: flex;
+        width: 100%;
+
+    }
+    .nav-links {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-inline-start: 0;
+        list-style: none;
+        margin-right: auto;
+        padding:1em;
+    }
+
+    .nav-links a {
+        padding-top: 4em;
+        padding: 1em;
+    }
+
+    .header-img {
+        display: inline-block;
+        width:100%;
+    }
+
+    nav {
+        display: inline-block;
+    }
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: medium;
+}
+
+h3 {
+    font-size: smaller;
+    color: grey;
+}
+
+hr {
+    border-top: 1px solid whitesmoke;
+    width: 90px;
+}
+
+.card {
+    margin: .5em;
+    border-radius: 2px;
+    background: antiquewhite;
+    width: 50vw;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center on cross */
+    justify-content: space-evenly; /* space on main */
+
+    border: 1px solid black;
+}
+
+.flex-container {
+    background-color: #efb323;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-item {
+    padding: 1em;
+}
+
+img {
+    width: 100%;
+    margin:0 1em;
+}
+
+
+i {
+    color: grey;
+}
+.text-section {
+    position: relative;
+    bottom: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 2.2em;
+}
+
+.boundary {
+    background-color: cadetblue;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-top: 2em;
+}
+
+.padding-boundary {
+    background-color: #0d5353;
+    padding: 0 3.5em 0 3.5em;
+
+}
+
+nav div:nth-child(3), nav div:nth-child(4) {
+    display: none;
+}
+
+nav div:nth-child(1), nav div:nth-child(2) {
+    flex-grow: 1;
+}
+
+nav div {
+    border: 2px double black;
+}
+
+@media screen and (min-width: 576px) {
+    body {
+        height: 100vh;
+    }
+
+    img {
+        display: inline-block;
+        border-radius: 120px;
+        width: 120px;
+    }
+
+    h2, h3 {
+        font-size: revert;
+    }
+
+    .icons {
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 55%;
+    }
+
+    .padding-boundary {
+        padding: 0 7em 0 7em;
+        height: 100%;
+    }
+
+    .boundary {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .card {
+        width: 250px;
+        height: 350px;
+    }
+
+    nav div:nth-child(3), nav div:nth-child(4) {
+
+        display: inline-block;
+    }
+
+    nav div {
+        border: 2px double black;
+        flex-grow: 1;
+    }
+
+
+
+}
