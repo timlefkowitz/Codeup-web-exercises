@@ -6,17 +6,25 @@ h2 {
     display: flex;
     justify-content: center;
 }
+.container{
+    display: flex;
+    flex-grow: 1;
+}
 
 .box1 {
-    display: inline-flex;
+    /*flex-grow: 1;*/
+    display: flex;
     border: 2px solid gray;
     min-width:0;
+    width: 50%;
 }
 
 .box2 {
-    display: inline-flex;
+    /*flex-grow: 2;*/
+    display: flex;
     border: 2pc solid gray;
     min-width:0;
+    width:50%
 }
 img {
     display: flex;
