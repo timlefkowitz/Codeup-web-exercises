@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    background-image: url("../images/pizza.png");
+    width:100%;
+}
+h1{
+    background-color: white;
+    width:100%;
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    font-size: 14px;
+}
+
+.card-title {
+    /*background-color: #027bff;*/
+}
+
+.pizzafooter {
+    display: flex;
+    justify-content: flex-end;
+}
