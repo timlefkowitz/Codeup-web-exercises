@@ -15,6 +15,14 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+
+<ul>
+    <button id="buttonOne">is it cool?</button>
+    <button id="buttonTwo">Evenly Grey</button>
+    <button id="buttonThree">Turn Blue</button>
+    <button id="buttonFour">Li's</button>
+</ul>
+
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -35,7 +43,7 @@
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        var iscool = document.getElementById('main-header').innerHTML = "JavaScript is Cool";
+        // var iscool = document.getElementById('main-header').innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
@@ -46,7 +54,7 @@
         subHeader.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li') ;
+        var listItems = document.getElementsByTagName('li');
         console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
@@ -54,17 +62,17 @@
         // listItems[2].style.color = 'grey';
         // listItems[4].style.color = 'grey';
 
-        for (var i = 0; i < listItems.length; i++) {
-            if (i % 2 !== 0) {
-                listItems[i].style.color = 'grey'
-            } else {
-            }
-        }
+        // for (var i = 0; i < listItems.length; i++) {
+        //     if (i % 2 !== 0) {
+        //         listItems[i].style.color = 'grey'
+        //     } else {
+        //     }
+        // }
 
 
         // TODO: Set text color of li with dbid = 1 to blue
 
-            listItems[0].style.color = 'blue';
+        // listItems[0].style.color = 'blue';
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
@@ -74,7 +82,48 @@
         var subheader = document.getElementsByClassName('sub-paragraph');
 
         subHeader.innerText = "Mission Accomplished!";
+
+
+    var buttonOne = document.getElementById('buttonOne');
+
+
+    buttonOne.addEventListener("click", function(){
+        //What would you like me to do.. when i detect this incoming click
+        document.getElementById('main-header').innerHTML = "JavaScript is Cool";
+    })
+
+    var buttonTwo = document.getElementById('buttonTwo');
+
+
+    buttonTwo.addEventListener("click", function(){
+        //What would you like me to do.. when i detect this incoming click
+        for (var i = 0; i < listItems.length; i++) {
+            if (i % 2 !== 0) {
+                listItems[i].style.color = 'grey'
+            } else {
+            }
+        }
+    })
+
+    var buttonThree = document.getElementById('buttonThree');
+
+
+    buttonThree.addEventListener("click", function(){
+        //What would you like me to do.. when i detect this incoming click
+        listItems[0].style.color = 'blue';
+    })
+
+    var buttonFour = document.getElementById('buttonOne');
+
+
+    buttonFour.addEventListener("click", function(){
+        //What would you like me to do.. when i detect this incoming click
+        var listItems = document.getElementsByTagName('li');
+    })
+
+
     })();
+
 </script>
 </body>
 </html>

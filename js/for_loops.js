@@ -181,14 +181,14 @@ for (var i = 1; i <= 10; i++){
 // // } while(false)
 //
 //
-//     for (var i = 20; i < 200; i++) {
-//         if (i % 2 !== 0) {
-//             console.log(i + " is odd.");
-//             continue;
-//         } else {
-//             console.log(i + " is even.")
-//         }
-//     }
+    for (var i = 20; i < 200; i++) {
+        if (i % 2 !== 0) {
+            console.log(i + " is odd.");
+            continue;
+        } else {
+            console.log(i + " is even.")
+        }
+    }
 //
 //
 // // Close our lecture: let's do a CODE BUZZ
