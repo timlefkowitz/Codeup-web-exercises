@@ -34,14 +34,43 @@ console.log(array_Clone([1, 2, [4, 0]]));
 
  */
 
-function array_Clone(input){
-    var array_Clone = function(arra1) {
-        return arra1.slice(0);
-    };
+
+//
+// function array_Clone(input) {
+//     var arrayclone = input.slice(0);
+//     return arrayclone;
+// };
+
+// function cloneArray(arra1){
+//     return arra1.slice(0);
+// }
+// var array_Clone = cloneArray(arra1);
+
+function cloneArray(arra1){
+    var cloned = arra1.slice(0);
+    return cloned;
+}
+var array_Clone = cloneArray(arra1);
+
+
+//
+// function arrayClone(input){
+//     return input.slice(0);
+// }
+
+
+//
+// function copyarray(input){
+// numbers = [1, 2, 3, 4, 5];
+// input = numbers.slice();
+// // [1, 2, 3, 4, 5]
+// }
+
+
 
     // numbers = [1, 2, 3];
     // numbersCopy = numbers.map((x) => x);
-}
+// arr2 = [...arr1];
 
 
 /*
@@ -61,6 +90,18 @@ Expected Output :
 
  */
 
+var first = function(array, n) {
+    if (array == null)
+        return void 0;
+    if (n == null)
+        return array[0];
+    if (n < 0)
+        return [];
+    return array.slice(0, n);
+};
+
+
+
 
 /*
 4. Write a JavaScript function to get the last element of an array. Passing a parameter 'n' will return the last 'n' elements of the array. Go to the editor
@@ -75,6 +116,14 @@ Expected Output :
 
  */
 
+var last = function(array, n) {
+    if (array == null)
+        return void 0;
+    if (n == null)
+        return array[array.length - 1];
+    return array.slice(Math.max(array.length - n, 0));
+};
+
 
 
 /*
@@ -88,6 +137,10 @@ Expected Output :
 
  */
 
+function join(input){
+    return input.join();
+}
+
 
 
 
@@ -95,12 +148,29 @@ Expected Output :
 Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8. Go to the editor
  */
 
+const num = "";
+const str = num.toString();
+const result = [str[0]];
+
+for(let x=1; x<str.length; x++){
+    if((str[x-1]%2 === 0)&&(str[x]%2===0)){
+        result.push('-',str[x]);
+    } else {
+        result.push(str[x]);
+    }
+}
+console.log(result.join(''));
+
 /*
 7. Write a JavaScript program to sort the items of an array. Go to the editor
 Sample array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 Sample Output : -4,-3,1,2,3,5,6,7,8
 
  */
+
+function sort(input){
+    return input.sort();
+}
 
 
 
@@ -110,6 +180,27 @@ Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 Sample Output : a ( 5 times )
 
  */
+
+
+var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+    for (var j=i; j<arr1.length; j++)
+    {
+        if (arr1[i] == arr1[j])
+            m++;
+        if (mf<m)
+        {
+            mf=m;
+            item = arr1[i];
+        }
+    }
+    m=0;
+}
+console.log(item+" ( " +mf +" times ) ") ;
 
 
 
