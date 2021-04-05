@@ -34,6 +34,10 @@ console.log(array_Clone([1, 2, [4, 0]]));
 
  */
 
+function clone(){
+    return clone.slice(0);
+}
+
 
 //
 // function array_Clone(input) {

@@ -11,6 +11,8 @@ function replace(input, input2, input3){
         return false;
     }
 }
+replace("ststst", "ststst," ,'ststs'));
+
 /*
 is a number function
  */

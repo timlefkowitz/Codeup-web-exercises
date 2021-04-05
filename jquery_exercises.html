@@ -7,14 +7,62 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
+        console.log("fully loaded and ready to go!")
 
-        // INSERT JAVASCRIPT CODE SAMPLE HERE
-        alert("DOM has finished loading")
+        $("#header").css({'display':'flex', 'justifyContent':'center', 'alignItems':'center'});
+        $(".mainbody").css({'display':'flex', 'justifyContent':'center', 'alignItems':'center'});
+        $(".codeup").css({'display':'flex', 'justifyContent':'center', 'alignItems':'center'});
+        // $("#header").ready(function() {
+        //     alert('#header');
+        // })
+        alert($('#header').html());
+        alert($('#ul_list').html());
+        $('.codeup').css({'border':'1px solid lightgrey'});
 
+        // // Element selectors examples below vvv
+        // $('p').css({'font-size':'30px', 'backgroundColor':'purple', 'color' : 'fuchsia'});
+        $('li').css({'font-size':'20px', 'color':'grey'});
+        $('h1').css('color','grey',);
+        $('p').css('font-style','helvetia');
+        $('h1','p','li').css('fontWeight', 'bold')
+        // $('div').css({'background-color':'lavender', 'font-size':'50px', 'color':'red'});
+        // $('body').css('background-color', 'lightgrey');
+        // $('div').html('New text inside of my div tag, courtesy of jquery!')
+        // $('p').html('This is a brand new text in my p tag, cus jquery replaced it!')
+        //
+        // // all selector example below
+        // $('*').css({'font-style':'italic', 'font-family':'sans-serif'});
+        //
+        // // this ones neat, courtesy of Victor
+        // // $("*").click(function(){
+        //     $('*').hide()
+        // })
+        // $('*').dblclick(function(){
+        //     $('*').show()
+        // })
     });
+
 </script>
+
+
 <body>
+
+    <header id="header">
+        <h1>jquery is where it's at!</h1>
+    </header>
+    <br>
+    <main class="mainbody">
+        <p>jquery will make life easier.</p>
+        <ul id="ul_list">
+            <li class="codeup">Loading the entire page</li>
+            <li class="codeup">jquery's selectors</li>
+            <li class="codeup">jquery's events</li>
+        </ul>
+    </main>
+    <div>
+        <a class="codeup">J Query is radical</a>
+    </div>
 
 </body>
 </html>
