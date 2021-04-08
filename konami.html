@@ -3,25 +3,68 @@
 <head>
     <title>Konami Code</title>
 </head>
+<style>
+    .gif{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body{
+        background-color: #7CB06C;
+    }
+    h1{
+        color : #afd3c1;
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <body>
 <h1>Konami Code</h1>
+<div class="gif">
+<img src="https://media.giphy.com/media/DpXqHdILXRRDi/source.gif">
+</div>
 
-<script src="/js/jquery.js"></script>
 <script>
-    "use strict";
+    // function konami (fn) {
+    //     var input = "";
+    //     var pattern = "3838404037393739666513";
+    //     $(document).keydown(function(e) {
+    //         input += e.keyCode;
+    //         if (input.includes(pattern)) {
+    //             fn();
+    //             input = "";
+    //         }
+    //     });
+    // }
+    // $(document).ready(function() {
+    //     konami(function () {
+    //         alert('YOU HAVE ADDED 30 LIVES!!')
+    //     })
+    // })
 
-    $(document).keyup(function(event){
-        console.log(event.keyCode);
-    });
+        "use strict";
+        var keysPressed = [];
+        var konamiCodeKeys = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"]
 
-    $('#textfield').keyup(function() {
-        alert('a key was released!');
+        $(document).keyup(function(event){
+        // console.log(event.keyCode);
+        keysPressed.push(event.key);
+
+        if(keysPressed.length > 11){
+            keysPressed.shift()
+        }
+        if(konamiCodeKeys.toString() === keysPressed.toString()){
+            $("body").html("You get 30 lives. Now go code some more!");
+            $("body").css("background-color", "#afd3c1");
+            $("h1").css("background-color", "#7CB06C");
+        }
+
+
+        console.log(keysPressed);
     });
 </script>
 
-<p>Please type something into this form:</p>
-<form>
-    <input type="text" id="textfield" name="textfield" placeholder="Type Here"/>
-</form>
+
 </body>
 </html>

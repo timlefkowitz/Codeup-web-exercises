@@ -3,8 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
+<style>
+    .invisible{
+        visibility: hidden;
+    }
+</style>
 <body>
 
+<div class="#best-seller-cont">
+<ul>
+    <li class="hat-sold">BaseBall</li>
+    <li class="hat-sold">Fedora </li>
+    <li class="hat-sold">ARt-Douche</li>
+</ul>
+
+</div>
+
+<div class="national-park-info">
+
+    <p>National Park Faqs</p>
+
+    <dl>
+        <dt>How Old is the National Park System?</dt>
+        <dd class="invisible">The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916</>
+
+        <dt>How many people visit the national parks?</dt>
+        <dd class="invisible">Total recreation visitors to the national parks in 2019: 327,516,619</dd>
+
+        <dt>What is the National Park Service budget?</dt>
+        <dd class="invisible">$2.98 billion</dd>
+
+        <dt>What is the Oldest National Park?</dt>
+        <dd class="invisible">Yellowstone National Park</>
+
+        <dt>Three of the 10 highest waterfalls in the world are located where?</dt>
+        <dd class="invisible">Yosemite National Park in California.</dd>
+
+        <dt>where was the hottest temperatures on earth was recorded in 1913</dt>
+        <dd class="invisible"> Death Valley National Park, registering 134 degrees.</dd>
+
+        <dt>What is the largest national park?</dt>
+        <dd class="invisible">Death Valley National Park is the largest national park in the lower 48 U.S. states, stretching 5,300 square miles or 3.4 million acres.</dd>
+
+        <dt>What is the smallest national park?</dt>
+        <dd class="invisible">The smallest national park is Hot Springs National Park in Arkansas, coming in at about 5,500 acres. This was actually the first federally protected piece of land in 1832. It was not named a national park until 1921. </dd>
+
+        <dt>What two states have the same amount of national parks?</dt>
+        <dd class="invisible">California and Alaska each have eight national parks. </dd>
+
+        <dt>What is the deepest lake in the USA?</dt>
+        <dd class="invisible">At 1,932 feet deep, Crater Lake National Park in Oregon is the deepest lake in the U.S.</dd>
+    </dl>
+
+    <button id="button" type="button">Click Me!</button>
+</div>
+
+<script>
+
+
+    $('#button').click(
+        function () {
+            $("#button").css('visibility', 'visible');
+        });
+
+
+
+
+    $(".hat-sold").each(function (index,ele) {
+if(index !== 0){
+$(ele).html("Fedora Hats");
+}
+})
+
+$(".hat-sold").first().html("Porkpie hats");
+
+
+
+$(".hat-sold").last().html("<em>Fancy Hats</em>");
+
+$(".hat-sold").parent().css("list-style-type", "upper-roman")
+
+console.log($("#best-seller-cont").children());
+
+$("#best-seller-cont".next().html("<li>New iNput of Li's here</li>"));
+
+
+// $('#dd').click(function() {
+//     $('#dd').css("visibility","visible");
+// });
+
+
+
+</script>
 </body>
 </html>
