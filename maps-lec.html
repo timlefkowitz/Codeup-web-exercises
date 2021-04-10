@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maps-Lec</title>
+</head>
+
+<!---- MapBOX CDN ----->
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+
+<style>
+    body {
+        background-color: papayawhip;
+    }
+    .map{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:5%;
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
+
+
+<body>
+<h1>MAPBOX API - API's</h1>
+<div class="map">
+
+<script src="js/keys.js"></script>
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGltb3RoeWxlZmtvd2l0eiIsImEiOiJja25hamx1N3MwZTVrMndtaWZ1NzhvcXplIn0.ndqbBpB2XdBWf6v8_mrZYA';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11'
+    });
+
+
+</script>
+</div>
+</body>
+</html>

@@ -9,6 +9,11 @@
     .invisible{
         visibility: hidden;
     }
+
+    .national-park-info {
+        text-align: center;
+
+    }
 </style>
 <body>
 
@@ -65,7 +70,12 @@
 
     $('#button').click(
         function () {
-            $("#button").css('visibility', 'visible');
+            $("dd").css('visibility', 'visible');
+        });
+
+    $('dt').click(
+        function () {
+            $("dt").css('background-color', 'cyan');
         });
 
 
@@ -90,9 +100,9 @@ console.log($("#best-seller-cont").children());
 $("#best-seller-cont".next().html("<li>New iNput of Li's here</li>"));
 
 
-// $('#dd').click(function() {
-//     $('#dd').css("visibility","visible");
-// });
+$('#dd').click(function() {
+    $('#dd').css({"visibility" : "visible"});
+});
 
 
 
