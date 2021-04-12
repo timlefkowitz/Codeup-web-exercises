@@ -77,22 +77,22 @@ var codeupmarker = new mapboxgl.Marker({color:"#4e5e34",draggable: true})
 
 // TODO TOGETHER: Add a popup to the map over San Antonio's Codeup. Set the html as a paragraph that says "Codeup Rocks!"
 
-// var markerHeight = 50, markerRadius = 10, linearOffset = 25;
-// var popupOffsets = {
-//     'top': [0, 0],
-//     'top-left': [0,0],
-//     'top-right': [0,0],
-//     'bottom': [0, -markerHeight],
-//     'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-//     'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-//     'left': [markerRadius, (markerHeight - markerRadius) * -1],
-//     'right': [-markerRadius, (markerHeight - markerRadius) * -1]
-// };
-// var popup = new mapboxgl.Popup({offset: popupOffsets, className: 'my-class'})
-//     .setLngLat([-98.4895, 29.4267])
-//     .setHTML("<p>CodeUp Rocks</p>")
-//     .setMaxWidth("300px")
-//     .addTo(map);
+var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+var popupOffsets = {
+    'top': [0, 0],
+    'top-left': [0,0],
+    'top-right': [0,0],
+    'bottom': [0, -markerHeight],
+    'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+    'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+    'left': [markerRadius, (markerHeight - markerRadius) * -1],
+    'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+};
+var popup = new mapboxgl.Popup({offset: popupOffsets, className: 'my-class'})
+    .setLngLat([-98.4895, 29.4267])
+    .setHTML("<p>CodeUp Rocks</p>")
+    .setMaxWidth("300px")
+    .addTo(map);
 
     //
     // marcoPopup.on('close', function (){
@@ -149,9 +149,17 @@ geocode("130 elmhurst ave, san antonio, tx", mapboxtoken).then(function(results)
 //
 //     new mapboxgl.Marker().setLngLat(results).setupPop(popup).addTo(marker)
 // });
+//
+//
+// //TODO: Instead of setCenter try using map.jumpTo()
 
 
-//TODO: Instead of setCenter try using map.jumpTo()
+geocode("130 elmhurst ave, san antonio, tx", mapboxtoken).then(function(results){
+    console.log(results);
+    codeupmarker.getOffset(results); // results, right now are an array of coordinates - looks good!
+})
+
+
 //TODO: Instead of setCenter try using map.flyTo()
 
 

@@ -23,10 +23,14 @@ toggleClassBtn.addEventListener('click', function (e){
     var toggle2 = document.getElementsByClassName("toggleClass2");
     var targetbox = document.getElementById("box");
 
+
     var toggle_1 = targetbox.setAttribute("class", "toggleClass1");
     var toggle_2 = targetbox = document.getElementById("box");
 
 
+    if(toggle_1 === toggleClass1){
+        targetbox.setAttribute("class", "toggleClass2");
+    }
 })
 
 
