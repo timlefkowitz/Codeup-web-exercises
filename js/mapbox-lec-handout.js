@@ -71,6 +71,8 @@ var codeupmarker = new mapboxgl.Marker({color:"#4e5e34",draggable: true})
 /**********************************************
  * 					POPUPS
  *********************************************/
+
+
 // Popups are the info boxes that appear on a map and may describe a given location.
 // Popup docs --> https://docs.mapbox.com/mapbox-gl-js/api/#popup
 
