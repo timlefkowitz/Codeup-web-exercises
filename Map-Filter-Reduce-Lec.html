@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Map ~ Filter ~ Reduce</title>
+
 </head>
+
 <body>
 
 
@@ -192,7 +194,7 @@
         age:32
     },{
         name: "bulbasaur",
-        age: "Unkown"
+        age: 5
     }
     ]
 
@@ -201,12 +203,14 @@
     //     0);
 
 
-    let sumage = familymembers.reduce((total, amount) => amount + amount);
-
-
-
+    let sumage = familymembers.reduce(function (total, familyMember){
+        return total + familyMember.age;
+    }, 0)
 
 
 </script>
+
+
+<script src="js/map-filter-reduce.js"></script>
 </body>
 </html>
