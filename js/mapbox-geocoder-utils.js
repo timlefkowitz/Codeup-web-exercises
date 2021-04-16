@@ -24,7 +24,8 @@ function geocode(search, token) {
             return data.features[0].center;
         });
 }
-console.log(geocode);
+console.log(geocode());
+
 
 /***
  * reverseGeocode is a method to search for a physical address based on inputted coordinates

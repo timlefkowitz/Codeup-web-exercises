@@ -63,7 +63,15 @@
             units: "imperial",
         }).done(function(results) {
             var weather = results.list;
-            console.log(results.list);
+            console.log(results);
+
+            var weatherObj = results;
+
+            //"results" is the weather object
+
+            // Example
+            // $("card").html("<h4>"+ results.day1.getforcast +"</h4>")
+
 
             if (weather.dt_txt.split(" ")[1] === "09:00:00") {
                 weatherlist.push(weather);
