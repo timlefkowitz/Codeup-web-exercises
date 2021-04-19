@@ -56,15 +56,49 @@
     window.onload = function() {
 
         var weatherlist = [];
+        console.log(weatherlist);
+
+        var day1 = $(document).ready(function(){
+            console.log("GIVE ME 5 DAYS");
+            $(".dayone");
+        })
+
+        var day2 = $(document).ready(function(){
+            console.log("GIVE ME 5 DAYS");
+            $(".daytwo");
+        })
+
+        var day3 = $(document).ready(function(){
+            console.log("GIVE ME 5 DAYS");
+            $(".daythree");
+        })
+
+        var day4 = $(document).ready(function(){
+            console.log("GIVE ME 5 DAYS");
+            $(".dayfour");
+        })
+
+        var day5 = $(document).ready(function(){
+            console.log("GIVE ME 5 DAYS");
+            $(".dayfive");
+        })
+
+        console.log(day1);
+        console.log(day2);
+        console.log(day3);
+        console.log(day4);
+        console.log(day5);
+
+
+        var day1 = $(".dayone").html()
+
 
         $.get("https://api.openweathermap.org/data/2.5/weather", {
             q: "San Antonio, US",
             appid: OPEN_WEATHER_APPID,
             units: "imperial",
         }).done(function(results) {
-            var weather = results.list;
-            console.log(results);
-
+            console.log(results)
             var weatherObj = results;
 
             //"results" is the weather object
@@ -73,14 +107,18 @@
             // $("card").html("<h4>"+ results.day1.getforcast +"</h4>")
 
 
-            if (weather.dt_txt.split(" ")[1] === "09:00:00") {
-                weatherlist.push(weather);
-                console.log(weatherlist)
-            }
-        });
+            // if (weather.dt_txt.split(" ")[1] === "09:00:00") {
+            //     weatherlist.push(weather);
+            //     console.log(weatherlist)
+            });
+        },{
 
-        console.log(weatherlist)
-    }});
+    }
+    })
+
+
+
+
 
 
 
@@ -194,7 +232,7 @@
         <div class="col">
             <div class="card" style="width: 10rem;">
                 <div class="card-header">
-                    <a class="day1 text-center">10-16-1988</a>
+                    <a class="day1 text-center day1">10-16-1988</a>
                 </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item desc">Description:</li>
@@ -209,7 +247,7 @@
         <div class="col">
             <div class="card" style="width: 10rem;">
                 <div class="card-header">
-                    <a class="day1 text-center">10-16-1988</a>
+                    <a class="daytwo text-center">10-16-1988</a>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Description:</li>
@@ -224,7 +262,7 @@
         <div class="col">
             <div class="card" style="width: 10rem;">
                 <div class="card-header">
-                    <a class="day1 text-center">10-16-1988</a>
+                    <a class="daythree text-center">10-16-1988</a>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Description:</li>
@@ -239,7 +277,7 @@
         <div class="col">
             <div class="card" style="width: 10rem;">
                 <div class="card-header">
-                    <a class="day1 text-center">10-16-1988</a>
+                    <a class="dayfour text-center">10-16-1988</a>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Description:</li>
@@ -254,7 +292,7 @@
         <div class="col">
             <div class="card" style="width: 10rem;">
                 <div class="card-header">
-                    <a class="day1 text-center">10-16-1988</a>
+                    <a class="dayfive text-center">10-16-1988</a>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">Description:</li>

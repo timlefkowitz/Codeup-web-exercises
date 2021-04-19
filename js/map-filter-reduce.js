@@ -36,6 +36,13 @@ const users = [
     }
 ];
 
+
+//TODO: USE .filter to create an array of user objects where each user
+
+let filteredUsers = users.filter(function(user){
+    return user.languages.length > 2;
+})
+
 /*
 2 Use .map to create an array of strings where each element is a user's email address
  */
@@ -95,8 +102,10 @@ var longest = users.reduce(
 6 Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
  */
 
-let usersnames = users.reduce(function (total, usersnames){
-    return total + usersnames.email;
-}, 0)
+let usersnames = users.reduce(function (accumulator, user){
+    return `${accumulator} + ${user.name},`;
+}, 'instructors are: ').slice(0,-1) + ".";
 
 console.log(usersnames);
+
+let mapjoin = `instructors are: ' ${users.map(user=>user.name).join(', ')}.`;
