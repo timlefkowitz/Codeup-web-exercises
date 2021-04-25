@@ -1,24 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <title>Photon Life</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- MapBOx utilis -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 
-    <!-- Custom CSS -->
+    <!-- BootStrap -->
 
-    <title></title>
-<style>
-    map{
-        padding: 5% 5% 5% 5%;
-    }
-</style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="stylesheet/styles.css">
+
+    <!--- J Query -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+
+
 
 </head>
+<body>
+<!-- NAV BAR -->
+<div id="jnavbar"></div>
+
+<!--&lt;!&ndash; Media panel &ndash;&gt;-->
+<!--<div class="container d-flex justify-content-center mediacontainer flavoursContainer">-->
+<!--    <img src="img/photonlife.png">-->
+<!--</div>-->
+
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -32,20 +56,6 @@
         crossorigin="anonymous"></script>
 
 
-<!--- MapBox CDN --->
-
-
-
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
-<script src="js/mapbox-geocoder-utils.js"></script>
-<script src="js/keys.js"></script>
-
-<!---- FONTS ---->
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
-
 
 
 <script>
@@ -53,177 +63,72 @@
 
         "use strict";
 
-    window.onload = function() {
+        window.onload = function() {
 
-        var weatherlist = [];
-        console.log(weatherlist);
+            var weatherlist = [];
+            console.log(weatherlist);
 
-        var day1 = $(document).ready(function(){
-            console.log("GIVE ME 5 DAYS");
-            $(".dayone");
-        })
+            var day1 = $(document).ready(function(){
+                console.log("GIVE ME 5 DAYS");
+                $(".dayone");
+            })
 
-        var day2 = $(document).ready(function(){
-            console.log("GIVE ME 5 DAYS");
-            $(".daytwo");
-        })
+            var day2 = $(document).ready(function(){
+                console.log("GIVE ME 5 DAYS");
+                $(".daytwo");
+            })
 
-        var day3 = $(document).ready(function(){
-            console.log("GIVE ME 5 DAYS");
-            $(".daythree");
-        })
+            var day3 = $(document).ready(function(){
+                console.log("GIVE ME 5 DAYS");
+                $(".daythree");
+            })
 
-        var day4 = $(document).ready(function(){
-            console.log("GIVE ME 5 DAYS");
-            $(".dayfour");
-        })
+            var day4 = $(document).ready(function(){
+                console.log("GIVE ME 5 DAYS");
+                $(".dayfour");
+            })
 
-        var day5 = $(document).ready(function(){
-            console.log("GIVE ME 5 DAYS");
-            $(".dayfive");
-        })
+            var day5 = $(document).ready(function(){
+                console.log("GIVE ME 5 DAYS");
+                $(".dayfive");
+            })
 
-        console.log(day1);
-        console.log(day2);
-        console.log(day3);
-        console.log(day4);
-        console.log(day5);
-
-
-        var day1 = $(".dayone").html()
+            console.log(day1);
+            console.log(day2);
+            console.log(day3);
+            console.log(day4);
+            console.log(day5);
 
 
-        $.get("https://api.openweathermap.org/data/2.5/weather", {
-            q: "San Antonio, US",
-            appid: OPEN_WEATHER_APPID,
-            units: "imperial",
-        }).done(function(results) {
-            console.log(results)
-            var weatherObj = results;
-
-            //"results" is the weather object
-
-            // Example
-            // $("card").html("<h4>"+ results.day1.getforcast +"</h4>")
+            var day1 = $(".dayone").html()
 
 
-            // if (weather.dt_txt.split(" ")[1] === "09:00:00") {
-            //     weatherlist.push(weather);
-            //     console.log(weatherlist)
+            $.get("https://api.openweathermap.org/data/2.5/weather", {
+                q: "San Antonio, US",
+                appid: OPEN_WEATHER_APPID,
+                units: "imperial",
+            }).done(function(results) {
+                console.log(results)
+                var weatherObj = results;
+
+                //"results" is the weather object
+
+                // Example
+                // $("card").html("<h4>"+ results.day1.getforcast +"</h4>")
+
+
+                // if (weather.dt_txt.split(" ")[1] === "09:00:00") {
+                //     weatherlist.push(weather);
+                //     console.log(weatherlist)
             });
         },{
 
-    }
+        }
     })
 
-
-
-
-
-
-
-
-
-
-
-    // // TODO: How can we get imperial units inst
-    // // ADDing units: "imperial" as an op
-    // // TODO: What are some additional ways we can get the weather from this API?-->
-    //  var searchbutton = document.querySelector('.searchbutton');
-    //  var inputValue = document.querySelector('.inputValue');
-    //  var name = document.querySelector('.name');
-    //  var desc = document.querySelector('.desc');
-    //  var temp = document.querySelector('.temp');
-
-// <!--        //-->
-//         $.get("https://api.openweathermap.org/data/2.5/weather", {
-//         appid: OPEN_WEATHER_APPID,
-//         lat: 29.423017,
-//         lon: -98.48527,
-//         units: "imperial",
-//         exclude:"current,minutely,hourly,alerts"
-//         }).done(function(results){
-//         var nameValue = results['name'];
-//         var tempValue = results['main']['temp'];
-//         var descValue = results['weather'][0]['description'];
-//         })
-
-
-// <!--        // searchbutton.addEventListener('click', function(){-->
-// <!--        //     fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid='+OPEN_WEATHER_APPID).then(response => response.json()).then(data => console.log(data))-->
-// <!--        //-->
-// <!--        //         .catch(eer => alert ("Wrong city name!"))-->
-// <!--        // })-->
-
-      //TODO: How can we incorporate mapbox with this? How can we make it dynami
-      // TODO: Explore the docs... what endpoint can we use to get a forecas
-      // TODO: What parameter can we include in order to get the daily forecast only-->
-
-   // $('#geocoder').append(geocoder.onAdd(map));-->
-
-
-
-
-</script>
-
-<script>
-
-    $(document).ready(function () {
-
-        "use strict";
-        mapboxgl.accessToken = mapboxtoken;
-        var map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v9',
-            zoom: 10,
-            center: [-98.4916, 29.4252]
-        });
-    });
 </script>
 
 
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Weather Map Project</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        </d iv>
-            <form class="d-flex">
-                <input class="form-control me-2 inputValue" type="search" placeholder="Enter a city" aria-label="Search">
-                <button class="btn btn-outline-success searchbutton" type="submit" value="Submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
-
-<style>
-    .row{
-        flex-wrap: nowrap;
-    }
-    .col{
-        flex-grow: 0;
-    }
-    #map{
-        display: flex;
-        justify-content: center;
-        width:80%;
-        height:400px;
-
-    }
-    .map {
-        display: flex;
-        justify-content: center;
-        padding-top:2em;
-
-    }
-    .days {
-        padding-top:2em;
-        width:80%;
-    }
-</style>
-
-
-<body>
 
 
 <div class="container">
@@ -234,12 +139,12 @@
                 <div class="card-header">
                     <a class="day1 text-center day1">10-16-1988</a>
                 </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item desc">Description:</li>
-                        <li class="list-group-item temp">Humidity:</li>
-                        <li class="list-group-item">Wind:</li>
-                        <li class="list-group-item">Pressure:</li>
-                    </ul>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item desc">Description:</li>
+                    <li class="list-group-item temp">Humidity:</li>
+                    <li class="list-group-item">Wind:</li>
+                    <li class="list-group-item">Pressure:</li>
+                </ul>
             </div>
         </div>
 
@@ -325,6 +230,80 @@
     <li>Get your project working, then focus on styling & refactoring</li>
     <li>To add mapbox autocomplete search, you will need to include geocoder scripts from mapbox</li>
 </ul>
+
+
+<style>
+    .row{
+        flex-wrap: nowrap;
+    }
+    .col{
+        flex-grow: 0;
+    }
+    #map{
+        display: flex;
+        justify-content: center;
+        width:80%;
+        height:400px;
+
+    }
+    .map {
+        display: flex;
+        justify-content: center;
+        padding-top:2em;
+
+    }
+    .days {
+        padding-top:2em;
+        width:80%;
+    }
+</style>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        "use strict";
+        mapboxgl.accessToken = mapboxtoken;
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v9',
+            zoom: 10,
+            center: [-98.4916, 29.4252]
+        });
+    });
+
+
+</script>
+
+
+
+
+<!--- Scripts --->
+
+<script src="js/js.js"></script>
+
+
+
+<!--Boot Strap -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+<!--- MapBox CDN --->
+
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/keys.js"></script>
+
+<!--- MapBox CDN --->
+
+
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 
 
 </body>
